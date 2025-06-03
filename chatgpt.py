@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("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"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def responder(prompt):
     response = client.chat.completions.create(
@@ -11,3 +11,4 @@ def responder(prompt):
         max_tokens=500
     )
     return response.choices[0].message.content.strip()
+
