@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("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"))
+client = OpenAI(api_key=os.getenv("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"))
 
 def responder(prompt):
     response = client.chat.completions.create(
